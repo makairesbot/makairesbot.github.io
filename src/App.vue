@@ -41,17 +41,20 @@
 
         <div class="bottom-container" v-show="legacyTab">
             <div class="selected-stats"> <!--Left panel, split selected legacies-->
-                <div class="selected-legacy-container">
+                <div class="selected-legacy-container" style="min-height: 60px; margin-top: 20px; align-items: center;">
+                    <div class="sunstone-icon" style="margin-right: 2px; margin-left: 2px;"></div>
                     <div v-for="item, index in selectedNormalLegacies" @click="selectedNormalLegacyClick(item, index)" class="legacy-container legacy-container-text" style="" :class="item">
                         <span class="legacy-text cost-text">{{ getSelectedPrice(item, false, false, index) }}</span>
                     </div>
                 </div>
-                <div class="selected-legacy-container">
+                <div class="selected-legacy-container" style="min-height: 60px; margin-top: 20px; align-items: center;">
+                    <div class="type-g-icon" style="margin-bottom: 24px;"></div>
                     <div v-for="item, index in selectedTypeGLegacies" @click="selectedTypeGLegacyClick(item, index)" class="legacy-container legacy-container-text" style="" :class="item">
                         <span class="legacy-text cost-text">{{ getSelectedPrice(item, true, false, index) }}</span>
                     </div>
                 </div>
-                <div class="selected-legacy-container">
+                <div class="selected-legacy-container" style="min-height: 60px; margin-top: 20px; align-items: center;">
+                    <div style="margin-bottom: 20px; justify-content: left; display: flex; flex-direction: row; width: 28px; height: 28px;" class="dot type-g-icon"></div>
                     <div v-show="selectedDotLegacy[0] != ''" @click="selectedDotLegacyClick()" class="legacy-container legacy-container-text" style="" :class="selectedDotLegacy[0]">
                         <span class="legacy-text cost-text">{{ getLegacyPrice(selectedDotLegacy[0] as string, selectedDotLegacy[1] as boolean, true) }}</span>
                     </div>
