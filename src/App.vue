@@ -757,7 +757,7 @@ const legacyList = {
     dot: {
         name: "Pendant of Dot",
         id: "dot",
-        levelCost: [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 34, 38, 42, 42, 46, 50],
+        levelCost: [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 34, 38, 42, 42, 46, 50],
         solar: false
     },
     smirror: {
